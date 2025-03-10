@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pack of Wolves | Discord Community</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("DALL·E\ 2025-03-07\ 20.49.51\ -\ A\ dark\ and\ mystical\ scene\ of\ wolves\ howling\ at\ the\ moon.\ The\ background\ is\ deep\ and\ shadowy\,\ with\ a\ misty\ atmosphere.\ The\ wolves\ are\ silhouetted\ again.webp") no-repeat center center/cover;
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            transition: background 0.5s, color 0.5s;
+            backdrop-filter: blur(10px);
+        }
+        .light-mode {
+            background: rgba(244, 244, 244, 0.8);
+            color: black;
+        }
+        header {
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            animation: slideIn 1.5s ease-in-out;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            animation: fadeInUp 2s ease-in-out;
+            backdrop-filter: blur(5px);
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: crimson;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: 0.3s;
+            animation: pulse 2s infinite;
+        }
+        .btn:hover {
+            background: darkred;
+        }
+        .toggle-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/800px-FullMoon2010.jpg') no-repeat center center/cover;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .toggle-btn.light {
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Sun_illustration.jpg/800px-Sun_illustration.jpg') no-repeat center center/cover;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-btn" id="modeToggle" onclick="toggleMode()"></button>
+    <header>
+        <h1>🐺 Welcome to Pack of Wolves 🐺</h1>
+    </header>
+    <div class="container">
+        <p>Join our epic Discord server where the pack gathers! We are a fun, engaging, and supportive community for everyone.</p>
+        <p>🚀 Meet fellow wolves | 🎮 Play games | 💬 Casual chat & fun!</p>
+        <a href="https://discord.gg/YSZVJXsaKB" class="btn">Join the Pack Now</a>
+    </div>
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("light-mode");
+            document.getElementById("modeToggle").classList.toggle("light");
+        }
+    </script>
+</body>
+</html>
